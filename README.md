@@ -25,7 +25,7 @@ The training required Jupyter Notebook and datasets. I have provided the dataset
 If you want to skip this part, I have provided my trained file in this repository**.
 
 # Step 2: Run on Jetson Nano
-First of all, you need to git clone this repositary. On your Terminal,
+First of all, you need to git clone this repository. In your Terminal,
 ```
 git clone https://github.com/dusty-nv/jetson-inference.git
 ```
