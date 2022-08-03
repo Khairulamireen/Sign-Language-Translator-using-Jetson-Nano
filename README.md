@@ -24,11 +24,11 @@ After cloning, create folders named 'data' and 'models'. This is the location of
 Always make sure your path is on the copied repository folder.
 
 
-Next, you need to wget the datasets. Make sure you are in the 'data' folder. On your Terminal,
+Next, you need to wget the datasets. Make sure you are in the 'data' folder. Using the link below:
 ```
-$ wget https://drive.google.com/drive/folders/1iYWzzvroDlCbv5rhg4AlAjA5OUlj989H?usp=sharing
+https://drive.google.com/file/d/1dtQZcwJ0MrHzgXgYt7L8up_1kBSciaSy/view?usp=sharing
 ```
-Extract the zip file in the folder.
+Download the dataset files and extract the zip file in the 'data' folder.
 
 For Training, on Terminal, cd to the folder path and type this line:
 ```
