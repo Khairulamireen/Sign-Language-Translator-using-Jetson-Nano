@@ -26,7 +26,7 @@ Always make sure your path is on the copied repository folder.
 
 Next, you need to wget the datasets. Make sure you are in the 'data' folder. On your Terminal,
 ```
-$ wget https://drive.google.com/file/d/1dtQZcwJ0MrHzgXgYt7L8up_1kBSciaSy/view?usp=sharing
+$ wget https://drive.google.com/drive/folders/1iYWzzvroDlCbv5rhg4AlAjA5OUlj989H?usp=sharing
 ```
 Extract the zip file in the folder.
 
