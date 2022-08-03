@@ -32,7 +32,7 @@ Download the dataset files and extract the zip file in the 'data' folder.
 
 For Training, on Terminal, cd to the folder path and type this line:
 ```
-$ python train.py --model-dir=models/project --epochs=(insert your epoch value) --batch-size=(insert your batch size of your choice) --workers=1 --lr=0.001 --arch=resnet18 data/dataset
+$ python train.py --model-dir=models/project --epochs=1 --batch-size=64 --workers=1 --lr=0.001 data/dataset
 ```
 Higher number of epoch may increase the accuracy. However, it will consume a lot of time. Make sure the number epoch is reasonable.
 
