@@ -21,8 +21,8 @@ Clone this repository.
 ```
 git clone https://github.com/Khairulamireen/Sign-Language-Translator-using-Jetson-Nano.git
 ```
-The training required Jupyter Notebook. After the training complete, there will be a .pth.tar file saved on your PC. This file is required to be sent to the Jetson Nano. 
-If you want to skip this part, I have provided my trained file in this repository.
+The training required Jupyter Notebook and datasets. I have provided the dataset**. After the training complete, there will be a .pth.tar file saved on your PC. This file is required to be sent to the Jetson Nano. 
+If you want to skip this part, I have provided my trained file in this repository**.
 
 # Step 2: Run on Jetson Nano
 First of all, you need to git clone this repositary. On your Terminal,
@@ -42,9 +42,13 @@ For converting .pth.tar file into .onnx file, you have to place your .pth.tar fi
 /python onnx_export.py --model-dir=models/project
 ```
 This will create the .onnx file and placed in the models/project folder. 
-The .onnx file is also provided in this repository. Recommended.
+The .onnx file is also provided**. Recommended.
 
-If you clone this repository in your Jetson Nano, you have to:
+** You can download the provided files using this link:
+```
+https://drive.google.com/drive/folders/1nGKNiPjYcUkzx8v5Iukm_VZEnF9jr1a_?usp=sharing
+```
+For Jetson Nano, you have can download the provided .onnx file and Asl.txt file:
 - Copy the provided .onnx file into /jetson-inference/python/training/classification/models/project
 - Copy the Asl.txt file into /jetson-inference/python/training/classification/data/project
 
