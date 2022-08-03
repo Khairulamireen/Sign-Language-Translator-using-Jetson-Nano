@@ -36,13 +36,14 @@ Copy the 'imagenet.py' file.
 Go back to initial folder path, and go to ./python/training/classification and paste the file here.
 
 Go to /jetson-inference/python/training/classification/models , create a folder. (You can named it anything. For me, I go with 'project')
+Go to /jetson-inference/python/training/classification/data , create a folder. (You can named it anything. For me, I go with 'project')
 
 For converting .pth.tar file into .onnx file, you have to place your .pth.tar file (Refer Step 1) into /jetson-inference/python/training/classification/models/project . Then, in Terminal, on the path /jetson-inference/python/training/classification , type: 
 ```
 /python onnx_export.py --model-dir=models/project
 ```
 This will create the .onnx file and placed in the models/project folder. 
-The .onnx file is also provided**. Recommended.
+The .onnx file is also provided**.
 
 ** You can download the provided files using this link:
 ```
@@ -52,7 +53,7 @@ For Jetson Nano, you have can download the provided .onnx file and Asl.txt file:
 - Copy the provided .onnx file into /jetson-inference/python/training/classification/models/project
 - Copy the Asl.txt file into /jetson-inference/python/training/classification/data/project
 
-# Testing on Jetson Nano
+# Step 3: Testing on Jetson Nano
 Lastly, to test the project. In Terminal, on path /jetson-inference/python/training/classification , type: 
 ```
 python imagenet.py --model=models/project/resnet18.onnx --input_blob=input_0 --output_blob=output_0 --labels=data/project/asl.txt /dev/video0
