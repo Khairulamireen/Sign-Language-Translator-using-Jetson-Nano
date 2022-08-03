@@ -55,7 +55,7 @@ For Jetson Nano, you have can download the provided .onnx file and Asl.txt file:
 # Testing on Jetson Nano
 Lastly, to test the project. In Terminal, on path /jetson-inference/python/training/classification , type: 
 ```
-python imagenet.py --model=models/project/resnet18.onnx --input_blob=input_0 --output_blob=output_0 --labels=data/dataset/asl.txt /dev/video0
+python imagenet.py --model=models/project/resnet18.onnx --input_blob=input_0 --output_blob=output_0 --labels=data/asl.txt /dev/video0
 ```
 Make sure you know your device file name in order to open your camera using Jetson Nano. In my case is 'video0'.
 
