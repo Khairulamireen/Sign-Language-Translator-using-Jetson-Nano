@@ -1,1 +1,1 @@
-# Signe-Language-Translator-using-Jetson-Nano
+# Sign-Language-Translator-using-Jetson-Nano
