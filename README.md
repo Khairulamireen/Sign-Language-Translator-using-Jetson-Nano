@@ -16,43 +16,44 @@ The methodology of this project are:
 Make sure you have install Python and PyTorch on your Device or Environment.
 
 # Lets Start!
-First of all, you need to git clone this repositary. On your Terminal,
+# Step 1: Training on PC
+Clone this repository.
 ```
 git clone https://github.com/Khairulamireen/Sign-Language-Translator-using-Jetson-Nano.git
 ```
-After cloning, create folders named 'data' and 'models'. This is the location of the Dataset.
-Always make sure your path is on the copied repository folder.
+The training required Jupyter Notebook. After the training complete, there will be a .pth.tar file saved on your PC. This file is required to be sent to the Jetson Nano. 
+If you want to skip this part, I have provided my trained file in this repository.
 
+# Step 2: Run on Jetson Nano
+First of all, you need to git clone this repositary. On your Terminal,
+```
+git clone https://github.com/dusty-nv/jetson-inference.git
+```
+This is the github repositary created by Dusty Franklin, NVIDIA jetson developer. 
 
-Next, you need to wget the datasets. Make sure you are in the 'data' folder. Using the link below:
-```
-https://drive.google.com/file/d/1dtQZcwJ0MrHzgXgYt7L8up_1kBSciaSy/view?usp=sharing
-```
-Download the dataset files and extract the zip file in the 'data' folder.
+Then, a folder name 'jetson-inference' will be created. In the folder, go to ./python/examples.
+Copy the 'imagenet.py' file.
+Go back to initial folder path, and go to ./python/training/classification and paste the file here.
 
-For Training, on Terminal, cd to the folder path and type this line:
-```
-$ python train.py --model-dir=models/project --epochs=1 --batch-size=64 --workers=1 --lr=0.001 data/dataset
-```
-Higher number of epoch may increase the accuracy. However, it will consume a lot of time. Make sure the number epoch is reasonable.
+Go to /jetson-inference/python/training/classification/models , create a folder. (You can named it anything. For me, I go with 'project')
 
-For converting .pth file into .onnx file, on Terminal,
+For converting .pth.tar file into .onnx file, you have to place your .pth.tar file (Refer Step 1) into /jetson-inference/python/training/classification/models/project . Then, in Terminal, on the path /jetson-inference/python/training/classification , type: 
 ```
-$ python onnx_export.py --model-dir=models/project
+/python onnx_export.py --model-dir=models/project
 ```
+This will create the .onnx file and placed in the models/project folder. 
+The .onnx file is also provided in this repository. Recommended.
 
-Lastly, to test the project. On Terminal,
+If you clone this repository in your Jetson Nano, you have to:
+- Copy the provided .onnx file into /jetson-inference/python/training/classification/models/project
+- Copy the Asl.txt file into /jetson-inference/python/training/classification/data/project
+
+# Testing on Jetson Nano
+Lastly, to test the project. In Terminal, on path /jetson-inference/python/training/classification , type: 
 ```
-$ python imagenet.py --model=models/project/resnet18.onnx --input_blob=input_0 --output_blob=output_0 --labels=data/dataset/asl.txt /dev/video0
+python imagenet.py --model=models/project/resnet18.onnx --input_blob=input_0 --output_blob=output_0 --labels=data/dataset/asl.txt /dev/video0
 ```
 Make sure you know your device file name in order to open your camera using Jetson Nano. In my case is 'video0'.
 
 Done! Camera window will pop-out and you can try using alphabet sign language on the camera. The translation will be on the upper left of the window.
 Have Fun!
-
-
-
-
-
-
-
