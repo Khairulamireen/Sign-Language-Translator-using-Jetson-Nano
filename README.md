@@ -62,3 +62,6 @@ Make sure you know your device file name in order to open your camera using Jets
 
 Done! Camera window will pop-out and you can try using alphabet sign language on the camera. The translation will be on the upper left of the window.
 Have Fun!
+
+This is my tutorial video for this project
+<iframe width="560" height="315" src="https://www.youtube.com/embed/QS89De_38-k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
