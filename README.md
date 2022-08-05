@@ -3,8 +3,7 @@
 
 This is my project developed during my Deep Learning in Intelligent Video Analytics and Computer Vision Workshop in IIUM.
 
-This project is about translating Sign Language Alphabet using Jetson Nano.
-This project focuses on the Image Classification where every hand posture will be classified to its letter class.
+This project is about translating Sign Language Alphabet using Jetson Nano and focuses on the Image Classification where every hand posture will be classified to its letter class.
 
 The methodology of this project are:
 - Collecting Datasets.
