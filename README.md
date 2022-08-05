@@ -64,4 +64,5 @@ Done! Camera window will pop-out and you can try using alphabet sign language on
 Have Fun!
 
 This is my tutorial video for this project
-<video src='https://youtu.be/QS89De_38-k'></video>
+
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/QS89De_38-k/0.jpg)](https://www.youtube.com/watch?v=QS89De_38-k)
