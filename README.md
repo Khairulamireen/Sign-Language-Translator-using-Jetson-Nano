@@ -16,32 +16,32 @@ Make sure you have install Python and PyTorch on your Device or Environment.
 
 # Lets Start!
 # Step 1: Training on PC
-Clone this repository.
+1. Clone this repository.
 ```
 git clone https://github.com/Khairulamireen/Sign-Language-Translator-using-Jetson-Nano.git
 ```
-The training required Jupyter Notebook and datasets. I have provided the dataset**. After the training complete, there will be a .pth.tar file saved on your PC. This file is required to be sent to the Jetson Nano. 
+2. The training required Jupyter Notebook and datasets. I have provided the dataset**. After the training complete, there will be a .pth.tar file saved on your PC. This file is required to be sent to the Jetson Nano.
+
 If you want to skip this part, I have provided my trained file in this repository**.
 
 # Step 2: Run on Jetson Nano
-First of all, you need to git clone this repository. In your Terminal,
+1. First of all, you need to git clone this repository. In your Terminal,
 ```
 git clone https://github.com/dusty-nv/jetson-inference.git
 ```
 This is the github repositary created by Dusty Franklin, NVIDIA jetson developer. 
 
-Then, a folder name 'jetson-inference' will be created. In the folder, go to ./python/examples.
-Copy the 'imagenet.py' file.
-Go back to initial folder path, and go to ./python/training/classification and paste the file here.
+2. Then, a folder name 'jetson-inference' will be created. In the folder, go to ./python/examples.
+3. Copy the 'imagenet.py' file.
+4. Go back to initial folder path, and go to ./python/training/classification and paste the file here.
+5. Go to /jetson-inference/python/training/classification/models , create a folder. (You can named it anything. For me, I go with 'project')
+6. Go to /jetson-inference/python/training/classification/data , create a folder. (You can named it anything. For me, I go with 'project')
 
-Go to /jetson-inference/python/training/classification/models , create a folder. (You can named it anything. For me, I go with 'project')
-Go to /jetson-inference/python/training/classification/data , create a folder. (You can named it anything. For me, I go with 'project')
-
-For converting .pth.tar file into .onnx file, you have to place your .pth.tar file (Refer Step 1) into /jetson-inference/python/training/classification/models/project . Then, in Terminal, on the path /jetson-inference/python/training/classification , type: 
+7. For converting .pth.tar file into .onnx file, you have to place your .pth.tar file (Refer Step 1) into /jetson-inference/python/training/classification/models/project . Then, in Terminal, on the path /jetson-inference/python/training/classification , type: 
 ```
 /python onnx_export.py --model-dir=models/project
 ```
-This will create the .onnx file and placed in the models/project folder. 
+This will create the .onnx file located in the models/project folder. 
 The .onnx file is also provided**.
 
 ** You can download the provided files using this link:
